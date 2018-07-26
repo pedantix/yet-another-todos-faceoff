@@ -41,5 +41,5 @@ Rails - http://localhost:3000/todos
 `wrk  -d 30s http://localhost:8080/todos\?count\=10000`
 `wrk  -d 30s http://localhost:3000/todos\?count\=10000`
 
-# Talk Slide
+# Talk Slides
 https://docs.google.com/presentation/d/e/2PACX-1vRGBaelirYsYpaakVdama8bKr41rk1cdj_ve3RdLXC7DyKsXsLgRZku8mfeBHomProu5xKFjeuMdANZ/pub?start=false&loop=false&delayms=3000
