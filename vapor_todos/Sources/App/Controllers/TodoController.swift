@@ -4,7 +4,7 @@ import Vapor
 final class TodoController {
     /// Returns a list of all `Todo`s.
     func index(_ req: Request) throws -> Future<[Todo]> {
-        var qb = Todo.query(on: req).sort(\.createdAt)
+        var qb = Todo.query(on: req).sort(\.createdAt, .descending)
         if let max = try? req.query.get(Int.self, at: "count") {
             qb = qb.range(lower: 0, upper: max)
         }

@@ -52,7 +52,7 @@ struct GenerateTodos: Command {
 
     private func createTodos(_ count: Int, connection: PostgreSQLConnection) -> EventLoopFuture<Void> {
         if (count > 1) {
-            return Todo(title: faker.lorem.sentences()).save(on: connection).flatMap { _ in
+            return Todo(title: "Todo \(count)").save(on: connection).flatMap { _ in
                 return self.createTodos(count - 1, connection: connection)
             }
         } else {
