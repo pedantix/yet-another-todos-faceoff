@@ -1,9 +1,7 @@
 import FluentPostgreSQL
 import Command
-import Fakery
 
 struct GenerateTodos: Command {
-    let faker = Faker(locale: "en-US")
     let deleteKey = "delete"
     let countKey = "count"
     /// See `Command`
@@ -51,12 +49,13 @@ struct GenerateTodos: Command {
     }
 
     private func createTodos(_ count: Int, connection: PostgreSQLConnection) -> EventLoopFuture<Void> {
+        let title = "Todo \(count)"
         if (count > 1) {
-            return Todo(title: "Todo \(count)").save(on: connection).flatMap { _ in
+            return Todo(title: title).save(on: connection).flatMap { _ in
                 return self.createTodos(count - 1, connection: connection)
             }
         } else {
-            return Todo(title: faker.lorem.sentences()).save(on: connection).map(to: Void.self) { _ in }
+            return Todo(title: title).save(on: connection).map(to: Void.self) { _ in }
         }
     }
 

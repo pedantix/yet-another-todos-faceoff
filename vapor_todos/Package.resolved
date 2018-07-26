@@ -38,15 +38,6 @@
         }
       },
       {
-        "package": "Fakery",
-        "repositoryURL": "https://github.com/vadymmarkov/Fakery.git",
-        "state": {
-          "branch": null,
-          "revision": "a1fa544a8ea1db64cf36c04185e4eda1fad71e84",
-          "version": "3.3.0"
-        }
-      },
-      {
         "package": "Fluent",
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
@@ -87,8 +78,8 @@
         "repositoryURL": "https://github.com/vapor/postgresql.git",
         "state": {
           "branch": null,
-          "revision": "a4c205aa628550e06263fb4d161133fb0dc4eb5c",
-          "version": "1.0.0"
+          "revision": "3fcc6263f94e836dd9b3722a37bfc61308c0b5f0",
+          "version": "1.0.1"
         }
       },
       {

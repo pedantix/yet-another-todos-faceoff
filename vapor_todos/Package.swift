@@ -12,12 +12,9 @@ let package = Package(
 
         /// 💻 APIs for creating interactive CLI tools.
          .package(url: "https://github.com/vapor/console.git", from: "3.0.0"),
-
-        // Fakery
-        .package(url: "https://github.com/vadymmarkov/Fakery.git", from: "3.3.0")
     ],
     targets: [
-        .target(name: "App", dependencies: ["FluentPostgreSQL", "Vapor", "Command", "Fakery"]),
+        .target(name: "App", dependencies: ["FluentPostgreSQL", "Vapor", "Command"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])
     ]
