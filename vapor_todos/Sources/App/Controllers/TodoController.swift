@@ -24,4 +24,9 @@ final class TodoController {
             return todo.delete(on: req)
         }.transform(to: .ok)
     }
+
+    /// Returns count of todos
+    func count(_ req: Request) -> Future<Int> {
+        return Todo.query(on: req).count()
+    }
 }
